@@ -1,0 +1,140 @@
+@view-transition {
+    navigation: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/**Ensemble des Menus présent sur le Site Web"*/
+
+/**Téléchargement*/
+
+.liens a {
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    /**font-family: 'Lemon/Milk light', sans-serif;*/
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.liens a:hover {
+    background-color: #f0f0f0;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.logo img {
+    height: 35px;
+    width: auto;
+}
+
+/**Menu : Projets-Forum-Tchat */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu a {
+    color: black;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0;
+    font-family: 'Lemon/Milk light', sans-serif;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.2 ease;
+    font-weight: 700;
+}
+.menu a.actif {
+    background-color: #f0f0f0;
+    font-weight: 700;
+}
+
+.menu a:hover {
+    background-color:#f0f0f0;
+}
+
+/**Menu : Barre Design */
+
+.barre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    max-width: 2000px;
+    margin: 0 auto;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    left: 20px;
+    /**transition: opacity 0.3s ease;*/
+}
+/**
+.barre.cachee {
+    opacity: 0;
+    pointer-events: none;
+}
+*/
+body {
+    margin: 0;
+    background-color: #e5e3df;
+    padding: 0px;
+}
+
+.acceuil {
+    height: 103vh;
+    width: 0 auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 40px;
+    margin-top: -70px;
+}
+
+.video-fond {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: -1;
+}
+
+.bouton-descendre {
+    color: #1E0037;
+    font-size: 24px;
+    text-decoration: none;
+    border: 2px solid #1E0037;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
