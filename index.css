@@ -88,14 +88,14 @@ html {
     right: 20px;
     left: 20px;
     z-index: 10;
-    /**transition: opacity 0.3s ease;*/
+    transition: opacity 0.3s ease;
 }
-/**
+
 .barre.cachee {
     opacity: 0;
     pointer-events: none;
 }
-*/
+
 body {
     margin: 0;
     background-color: #e5e3df;
@@ -118,6 +118,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    right: -100%;
     min-width: 100%;
     min-height: 100%;
     width: auto;
@@ -142,14 +143,87 @@ body {
 
 /**Contenu Site Web - Texte, liens etc */
 
+.cartes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "carte1 carte1"
+        "carte2 carte3";
+    gap: 20px;
+    margin: 0;
+}
+
 .carte1 {
-    background-color: white;
-    color: black;
-    padding: 1px 10px;
-    font-size: 18px;
-    font-family: 'Lemon/Milk light', sans-serif;
-    display: flex;
-    position: absolute;
+    grid-area: carte1;
+    background-color: lightblue;
+    padding: 1px;
     text-align: center;
-    margin: 0 auto;
-} 
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.carte2 {
+    grid-area: carte2;
+    justify-content: center;
+    background-color: white;
+    border-radius: 6%;
+    display: flex;
+    height: 1000px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    left: 40px;
+    position: absolute;
+    top: 955px;
+    width: 48%;
+}
+
+.carte2 h4 {
+    font-size: 18px;
+    word-break: break-word;
+}
+
+.carte3 {
+    grid-area: carte3;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    justify-self: start;
+    left: 1150px;
+    top: 992px;
+}
+
+.carte3 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4%;
+    display: block;
+}
+
+.fleche {
+    font-size: 30px;
+    color: black;
+    border: 3.3 solid;
+    cursor: pointer;
+    border-radius: 50%;
+    text-decoration: none;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+#fleche-gauche {
+    left: -60px;
+}
+
+#fleche-droite {
+    right: -60px;
+}
