@@ -91,11 +91,6 @@ html {
     flex-wrap: wrap;
 }
 
-.barre.cachee {
-    opacity: 0;
-    pointer-events: none;
-}
-
 body {
     margin: 0;
     background-color: #e5e3df;
@@ -206,6 +201,7 @@ body {
 
 /* Bloc image + flèches, indépendant du texte */
 .image-carousel {
+    grid-area: carte2;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -295,10 +291,10 @@ body {
     box-sizing: border-box;
     overflow: hidden;
     width: 100%;
-    height: 500px;
+    height: auto;
     padding: 20px 90px;
     flex-wrap: wrap;
-    color: whitesmoke;
+    color: #D4C0A6;
     flex-direction: column;
     font-size: clamp(35px, 5vw, 32px);
 }
@@ -310,9 +306,65 @@ body {
     margin-top: 10%;
     display: flex;
     position: absolute;
+    align-items: center;
 }
 
+.worldgrid {
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    font-size: 20px;
+    top: 81%;
+    left: 1%;      /* remplace margin-right: 94% */
+}
 
+.worldgrid img {
+    height: 80px;
+    width: auto;
+}
+
+.tecnogamestudio {
+    display: flex;
+    align-items: flex-start;
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    font-size: 20px;
+    top: 81%;
+    left: 6%;     /* remplace margin-right: 80% */
+}
+
+.tecnogamestudio img {
+    height: 80px;
+    width: auto;
+}
+
+.carte6 h4 {
+    color: whitesmoke;
+    position: relative;
+    left: -29%;
+    top: 320px;
+    font-size: 40px;
+}
+
+.credit {
+    color: whitesmoke;
+    margin-top: 3%;
+    margin-left: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.credit h4 {
+    font-size: 30px;
+    font-family: 'Lemon/Milk light', sans-serif;
+}
+
+.credit ul {
+    font-size: 24px;
+}
 
 
 
