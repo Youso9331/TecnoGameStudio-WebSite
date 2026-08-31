@@ -1,5 +1,5 @@
 
-/**const barre = document.querySelector('.barre');
+const barre = document.querySelector('.barre');
 let dernierScroll = 0;
 const barre = document.querySelector('.barre');
 
@@ -14,7 +14,7 @@ window.addEventListener('scroll', function() {
 
     dernierScroll = scrollActuel;
 });
-*/
+
 
 const images = ["image1.png", "image2.png", "image3.png"];
 

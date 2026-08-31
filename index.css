@@ -82,7 +82,7 @@ html {
     border-radius: 20px;
     max-width: 2000px;
     margin: 0 auto;
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 20px;
     left: 20px;
@@ -148,15 +148,19 @@ body {
     grid-template-columns: 1fr;
     grid-template-areas:
         "carte1"
-        "carte2";
-    gap: 20px;
+        "carte2"
+        "carte3"
+        "carte4"
+        "carte5"
+        "carte6";
+    gap: 0;
     margin: 0;
     padding: 0;
 }
 
 .carte1 {
     grid-area: carte1;
-    background-color: lightblue;
+    background-color: #D4C0A6;
     height: 12px;
     width: 100%;
     margin: 0;
@@ -165,8 +169,7 @@ body {
 
 .carte2 {
     grid-area: carte2;
-    background-color: white;
-    border-radius: 6%;
+    background-color: #24354C;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -174,32 +177,31 @@ body {
     min-height: 400px;
     box-sizing: border-box;
     overflow: hidden;
-    width: 99%;
-    padding: 30px 60px;
+    width: 100%;
+    padding: 20px 90px;
     flex-wrap: wrap;
-    margin-right: 10px;
-    margin-left: 10px;
+    color: #D4C0A6;
 }
 
 .carte2 h4 {
-    font-size: clamp(22px, 3vw, 32px);
+    font-size: clamp(42px, 5vw, 32px);
     word-break: break-word;
-    margin: 0 0 16px 0;
-    
-    width: 100%;
+    margin: 7% 0 0 5%;
+    width: 50%;
+    font-family: 'Lemon/Milk light', sans-serif;
+    text-align: center;
 }
 
 .carte2 p {
-    font-family: 'Lemon/Milk light', sans-serif;
-    font-size: clamp(16px, 1.8vw, 20px);
-    line-height: 1.6;
-    max-width: 50%;
-    margin: 0;
-    color: #333;
+    font-size: clamp(31px, 2vw, 32px);
+    line-height: 2.25;
+    max-width: 60%;
+    margin-top: 5%;
+    text-align: center;
 }
 
 .carte2 span.grand {
-    font-size: clamp(20px, 2vw, 24px);
+    font-size: clamp(20px, 2vw, 40px);
 }
 
 /* Bloc image + flèches, indépendant du texte */
@@ -207,6 +209,8 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-top: -30%;
+    margin-left: 70%;
 }
 
 #image-carousel {
@@ -218,19 +222,143 @@ body {
 }
 
 .fleche {
-    font-size: 24px;
-    color: black;
-    background: white;
-    border: 2px solid black;
+    font-size: 34px;
+    color: #D4C0A6;
+    background: none;
+    border: 3px solid #D4C0A6;
     cursor: pointer;
     border-radius: 50%;
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
 }
+
+.carte3 {
+    grid-area: carte3;
+    background-color: #D4C0A6;
+    height: 12px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.carte4 {
+    grid-area: carte4;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 400px;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    padding: 20px 90px;
+    flex-wrap: wrap;
+    color: black;
+    flex-direction: column;
+}
+.carte4 h1 {
+    font-family: 'Lemon/Milk light', sans-serif;
+    display: flex;
+    align-items: center;
+    font-size: clamp(42px, 5vw, 32px);
+}
+.carte4 ul {
+    font-size: clamp(31px, 2vw, 32px);
+    align-items: center;
+    line-height: 2;
+    margin: 0 0 0 0;
+}
+
+.carte5 {
+    grid-area: carte5;
+    background-color: #D4C0A6;
+    height: 12px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.carte6 {
+    grid-area: carte6;
+    background-color: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    min-height: 400px;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    height: 500px;
+    padding: 20px 90px;
+    flex-wrap: wrap;
+    color: whitesmoke;
+    flex-direction: column;
+    font-size: clamp(35px, 5vw, 32px);
+}
+
+.carte6 a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: clamp(42px, 5vw, 32px);
+    margin-top: 10%;
+    display: flex;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.popup-overlay {
+    display: none;              /* cachée par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);   /* fond sombre semi-transparent */
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-overlay:target {
+    display: flex;   /* s'affiche uniquement quand l'URL contient #telechargement */
+}
+
+.popup-contenu {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+}
+
+.popup-fermer {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
 
 /* ============================================
    RESPONSIVE - Tablette (écran < 900px)
